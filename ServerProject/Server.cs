@@ -15,12 +15,6 @@ namespace ServerProject
     {
         private Socket listener;
         private List<ClientHandler> clients = new List<ClientHandler>();
-        private BindingList<object> users = new BindingList<object>();
-
-        public BindingList<object> Users
-        {
-            get { return users; }
-        }
 
         public void Start()
         {

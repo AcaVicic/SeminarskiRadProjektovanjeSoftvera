@@ -1,4 +1,6 @@
 ﻿using Common;
+using ControllerClass;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +54,24 @@ namespace ServerProject
             Response response;
             switch (request.Operation)
             {
-                
+                case Operation.Login:
+                    Owner o = Controller.Instance.Login(request.RequestObject);
+                    if(o != null)
+                    {
+                        response = new Response
+                        {
+                            IsSuccessful = true,
+                            Result = o
+                        };
+                    }
+                    else
+                    {
+                        response = new Response
+                        {
+                            IsSuccessful = false
+                        };
+                    }
+                    return response;
             }
             throw new Exception("Operation doesn't exist!");
         }

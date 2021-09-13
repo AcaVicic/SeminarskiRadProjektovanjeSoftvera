@@ -46,6 +46,7 @@
     <Compile Include="ConsoleTesting.cs" />
     <Compile Include="Console\Console.cs" />
     <Compile Include="Console\ConsoleType.cs" />
+    <Compile Include="Owner.cs" />
     <Compile Include="Worker.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
