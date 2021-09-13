@@ -40,9 +40,9 @@ namespace View.Forms
             {
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                
             }
         }
 

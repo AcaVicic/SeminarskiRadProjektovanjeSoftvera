@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SystemOperations.WorkerSO;
 
 namespace ControllerClass
 {
@@ -36,6 +37,12 @@ namespace ControllerClass
                 return owner;
             }
             return null;
+        }
+
+        public void AddWorker(Worker worker)
+        {
+            AddWorkerSO add = new AddWorkerSO();
+            add.ExecuteTemplate(worker);
         }
     }
 }

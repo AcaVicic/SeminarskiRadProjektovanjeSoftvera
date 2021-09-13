@@ -56,7 +56,7 @@ namespace ServerProject
             {
                 case Operation.Login:
                     Owner o = Controller.Instance.Login(request.RequestObject);
-                    if(o != null)
+                    if (o != null)
                     {
                         response = new Response
                         {
@@ -72,6 +72,9 @@ namespace ServerProject
                         };
                     }
                     return response;
+                case Operation.AddWorker:
+                    Controller.Instance.AddWorker((Worker)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");
         }

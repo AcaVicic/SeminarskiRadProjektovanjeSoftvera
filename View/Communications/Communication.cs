@@ -25,6 +25,17 @@ namespace View.Communications
             }
         }
 
+        internal void AddWorker(Worker worker)
+        {
+            Request request = new Request() { Operation = Operation.AddWorker, RequestObject = worker };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new AddException(response.Error);
+        }
+
         private Communication()
         {
 

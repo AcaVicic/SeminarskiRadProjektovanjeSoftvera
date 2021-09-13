@@ -22,6 +22,11 @@ namespace View
             }
         }
 
+        internal void ShowDialog(Form form)
+        {
+            form.ShowDialog();
+        }
+
         private MainCoordinator()
         {
 

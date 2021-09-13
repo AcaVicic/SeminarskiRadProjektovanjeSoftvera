@@ -8,6 +8,7 @@ namespace Common
 {
     public enum Operation
     {
-        Login
+        Login,
+        AddWorker
     }
 }
