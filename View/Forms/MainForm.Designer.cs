@@ -72,14 +72,14 @@
             // addWorkerToolStripMenuItem
             // 
             this.addWorkerToolStripMenuItem.Name = "addWorkerToolStripMenuItem";
-            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addWorkerToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.addWorkerToolStripMenuItem.Text = "Add Worker";
             this.addWorkerToolStripMenuItem.Click += new System.EventHandler(this.addWorkerToolStripMenuItem_Click);
             // 
             // deleteWorkerToolStripMenuItem
             // 
             this.deleteWorkerToolStripMenuItem.Name = "deleteWorkerToolStripMenuItem";
-            this.deleteWorkerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteWorkerToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.deleteWorkerToolStripMenuItem.Text = "Delete Worker";
             this.deleteWorkerToolStripMenuItem.Click += new System.EventHandler(this.deleteWorkerToolStripMenuItem_Click);
             // 
@@ -94,8 +94,9 @@
             // addClientToolStripMenuItem
             // 
             this.addClientToolStripMenuItem.Name = "addClientToolStripMenuItem";
-            this.addClientToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.addClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addClientToolStripMenuItem.Text = "Add Client";
+            this.addClientToolStripMenuItem.Click += new System.EventHandler(this.addClientToolStripMenuItem_Click);
             // 
             // consoleToolStripMenuItem
             // 

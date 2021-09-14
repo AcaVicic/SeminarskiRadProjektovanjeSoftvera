@@ -29,7 +29,20 @@ namespace View.Helpers
             });
 
             if (isEmpty)
-                throw new ValidationException();
+                throw new ValidationException("Fields must not be empty");
+        }
+
+        internal static DateTime DateFormat(TextBox txtBirthDate)
+        {
+            try
+            {
+                DateTime birthDate = DateTime.ParseExact(txtBirthDate.Text, "dd.MM.yyyy.", null);
+                return birthDate;
+            }
+            catch (Exception)
+            {
+                throw new ValidationException("Date format must be dd.MM.yyyy.");
+            }
         }
     }
 }

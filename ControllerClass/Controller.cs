@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SystemOperations.ClientSO;
 using SystemOperations.WorkerSO;
 
 namespace ControllerClass
@@ -58,6 +59,12 @@ namespace ControllerClass
         {
             DeleteWorkerSO delete = new DeleteWorkerSO();
             delete.ExecuteTemplate(worker);
+        }
+
+        public void AddClient(Client client)
+        {
+            AddClientSO add = new AddClientSO();
+            add.ExecuteTemplate(client);
         }
     }
 }

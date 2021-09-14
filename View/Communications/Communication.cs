@@ -36,6 +36,17 @@ namespace View.Communications
                 throw new AddException(response.Error);
         }
 
+        internal void AddClient(Client client)
+        {
+            Request request = new Request() { Operation = Operation.AddClient, RequestObject = client };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new AddException(response.Error);
+        }
+
         internal List<Worker> FindWorkers(string searchText)
         {
             Request request = new Request() { Operation = Operation.FindWorkers, RequestObject = searchText };

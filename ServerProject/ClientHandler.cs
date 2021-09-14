@@ -81,6 +81,9 @@ namespace ServerProject
                 case Operation.DeleteWorker:
                     Controller.Instance.DeleteWorker((Worker)request.RequestObject);
                     return response = new Response() { IsSuccessful = true };
+                case Operation.AddClient:
+                    Controller.Instance.AddClient((Client)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");
         }

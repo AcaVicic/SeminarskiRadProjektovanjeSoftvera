@@ -35,5 +35,10 @@ namespace View.Forms
         {
             controller.ShowDialog(new DeleteWorkerForm());
         }
+
+        private void addClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new AddClientForm());
+        }
     }
 }

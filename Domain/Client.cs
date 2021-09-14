@@ -16,17 +16,17 @@ namespace Domain
         public DateTime DateOfBirth { get; set; }
         public string TableName => "Client";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => $"'{FirstName}', '{LastName}', '{DateOfBirth:yyyy-MM-dd}'";
 
-        public string SetCondition => throw new NotImplementedException();
+        public string SetCondition => "";
 
-        public string SetValue => throw new NotImplementedException();
+        public string SetValue => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => "";
 
-        public string Join => throw new NotImplementedException();
+        public string Join => "";
 
-        public string OrderBy => throw new NotImplementedException();
+        public string OrderBy => "";
 
         public string IdName { get; set; } = "ClientId";
 

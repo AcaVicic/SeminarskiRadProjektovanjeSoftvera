@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientSO\AddClientSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemOperationBase.cs" />
     <Compile Include="WorkerSO\AddWorkerSO.cs" />
@@ -59,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppointmentSO\" />
-    <Folder Include="ClientSO\" />
     <Folder Include="ConsoleSO\" />
     <Folder Include="ConsoleTestingSO\" />
   </ItemGroup>

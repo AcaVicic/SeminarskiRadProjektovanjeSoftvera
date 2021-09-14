@@ -11,6 +11,7 @@ namespace Common
         Login,
         AddWorker,
         FindWorkers,
-        DeleteWorker
+        DeleteWorker,
+        AddClient
     }
 }
