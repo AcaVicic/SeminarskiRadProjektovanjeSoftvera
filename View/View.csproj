@@ -52,6 +52,7 @@
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\WorkerController.cs" />
     <Compile Include="Exceptions\AddException.cs" />
+    <Compile Include="Exceptions\DeleteException.cs" />
     <Compile Include="Exceptions\LoginException.cs" />
     <Compile Include="Exceptions\ValidationException.cs" />
     <Compile Include="Forms\AddWorkerForm.cs">

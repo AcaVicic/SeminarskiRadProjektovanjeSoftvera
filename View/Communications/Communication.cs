@@ -36,6 +36,30 @@ namespace View.Communications
                 throw new AddException(response.Error);
         }
 
+        internal List<Worker> FindWorkers(string searchText)
+        {
+            Request request = new Request() { Operation = Operation.FindWorkers, RequestObject = searchText };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new Exception(response.Error);
+
+            return response.Result as List<Worker>;
+        }
+
+        internal void DeleteWorker(Worker worker)
+        {
+            Request request = new Request() { Operation = Operation.DeleteWorker, RequestObject = worker };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new DeleteException(response.Error);
+        }
+
         private Communication()
         {
 

@@ -75,6 +75,12 @@ namespace ServerProject
                 case Operation.AddWorker:
                     Controller.Instance.AddWorker((Worker)request.RequestObject);
                     return response = new Response() { IsSuccessful = true };
+                case Operation.FindWorkers:
+                    List<Worker> workers = Controller.Instance.FindWorkers(request.RequestObject.ToString());
+                    return response = new Response() { IsSuccessful = true, Result = workers };
+                case Operation.DeleteWorker:
+                    Controller.Instance.DeleteWorker((Worker)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");
         }

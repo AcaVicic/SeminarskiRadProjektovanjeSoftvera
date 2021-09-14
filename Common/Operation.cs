@@ -9,6 +9,8 @@ namespace Common
     public enum Operation
     {
         Login,
-        AddWorker
+        AddWorker,
+        FindWorkers,
+        DeleteWorker
     }
 }

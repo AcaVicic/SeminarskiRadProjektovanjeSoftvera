@@ -44,5 +44,20 @@ namespace ControllerClass
             AddWorkerSO add = new AddWorkerSO();
             add.ExecuteTemplate(worker);
         }
+
+        public List<Worker> FindWorkers(string searchText)
+        {
+            Worker worker = new Worker();
+            GetAllWorkersSO getAll = new GetAllWorkersSO();
+            getAll.ExecuteTemplate(worker);
+
+            return getAll.Workers.Where(w => w.ToString().Contains(searchText)).ToList();
+        }
+
+        public void DeleteWorker(Worker worker)
+        {
+            DeleteWorkerSO delete = new DeleteWorkerSO();
+            delete.ExecuteTemplate(worker);
+        }
     }
 }

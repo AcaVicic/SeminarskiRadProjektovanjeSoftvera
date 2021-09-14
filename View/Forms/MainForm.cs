@@ -30,5 +30,10 @@ namespace View.Forms
         {
             Communication.Instance.Disconnect();
         }
+
+        private void deleteWorkerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new DeleteWorkerForm());
+        }
     }
 }

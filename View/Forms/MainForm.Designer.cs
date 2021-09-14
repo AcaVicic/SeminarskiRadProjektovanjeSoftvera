@@ -81,6 +81,7 @@
             this.deleteWorkerToolStripMenuItem.Name = "deleteWorkerToolStripMenuItem";
             this.deleteWorkerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteWorkerToolStripMenuItem.Text = "Delete Worker";
+            this.deleteWorkerToolStripMenuItem.Click += new System.EventHandler(this.deleteWorkerToolStripMenuItem_Click);
             // 
             // clientToolStripMenuItem
             // 

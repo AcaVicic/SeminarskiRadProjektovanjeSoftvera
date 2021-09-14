@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvWorkers = new System.Windows.Forms.DataGridView();
             this.btnDeleteWorker = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,18 +47,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Delete Worker";
             // 
-            // dataGridView1
+            // dgvWorkers
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(496, 223);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvWorkers.AllowUserToAddRows = false;
+            this.dgvWorkers.AllowUserToDeleteRows = false;
+            this.dgvWorkers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvWorkers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvWorkers.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkers.Location = new System.Drawing.Point(12, 118);
+            this.dgvWorkers.Name = "dgvWorkers";
+            this.dgvWorkers.ReadOnly = true;
+            this.dgvWorkers.Size = new System.Drawing.Size(496, 223);
+            this.dgvWorkers.TabIndex = 1;
             // 
             // btnDeleteWorker
             // 
@@ -69,25 +70,26 @@
             this.btnDeleteWorker.TabIndex = 2;
             this.btnDeleteWorker.Text = "Delete worker";
             this.btnDeleteWorker.UseVisualStyleBackColor = true;
+            this.btnDeleteWorker.Click += new System.EventHandler(this.btnDeleteWorker_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(71, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearch.Location = new System.Drawing.Point(12, 92);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(139, 20);
+            this.txtSearch.TabIndex = 4;
             // 
-            // label3
+            // btnSearch
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Search:";
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSearch.Location = new System.Drawing.Point(157, 89);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // DeleteWorkerForm
             // 
@@ -95,14 +97,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(520, 378);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDeleteWorker);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvWorkers);
             this.Controls.Add(this.label1);
             this.Name = "DeleteWorkerForm";
             this.Text = "DeleteWorkerForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,9 +113,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvWorkers;
         private System.Windows.Forms.Button btnDeleteWorker;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
