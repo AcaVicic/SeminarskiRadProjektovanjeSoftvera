@@ -40,6 +40,8 @@
             this.addConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +88,9 @@
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addClientToolStripMenuItem});
+            this.addClientToolStripMenuItem,
+            this.findClientToolStripMenuItem,
+            this.deleteClientToolStripMenuItem});
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
             this.clientToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.clientToolStripMenuItem.Text = "Client";
@@ -126,6 +130,19 @@
             this.deleteConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.deleteConsoleToolStripMenuItem.Text = "Delete Console";
             // 
+            // findClientToolStripMenuItem
+            // 
+            this.findClientToolStripMenuItem.Name = "findClientToolStripMenuItem";
+            this.findClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.findClientToolStripMenuItem.Text = "Find Client";
+            // 
+            // deleteClientToolStripMenuItem
+            // 
+            this.deleteClientToolStripMenuItem.Name = "deleteClientToolStripMenuItem";
+            this.deleteClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteClientToolStripMenuItem.Text = "Delete Client";
+            this.deleteClientToolStripMenuItem.Click += new System.EventHandler(this.deleteClientToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,5 +174,7 @@
         private System.Windows.Forms.ToolStripMenuItem addConsoleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateConsoleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteConsoleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem findClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteClientToolStripMenuItem;
     }
 }

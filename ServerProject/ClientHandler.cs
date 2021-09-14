@@ -84,6 +84,12 @@ namespace ServerProject
                 case Operation.AddClient:
                     Controller.Instance.AddClient((Client)request.RequestObject);
                     return response = new Response() { IsSuccessful = true };
+                case Operation.FindClients:
+                    List<Client> clients = Controller.Instance.FindClients(request.RequestObject.ToString());
+                    return response = new Response() { IsSuccessful = true, Result = clients };
+                case Operation.DeleteClient:
+                    Controller.Instance.DeleteClient((Client)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");
         }

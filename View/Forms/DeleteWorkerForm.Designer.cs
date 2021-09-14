@@ -68,7 +68,7 @@
             this.btnDeleteWorker.Name = "btnDeleteWorker";
             this.btnDeleteWorker.Size = new System.Drawing.Size(95, 23);
             this.btnDeleteWorker.TabIndex = 2;
-            this.btnDeleteWorker.Text = "Delete worker";
+            this.btnDeleteWorker.Text = "Delete Worker";
             this.btnDeleteWorker.UseVisualStyleBackColor = true;
             this.btnDeleteWorker.Click += new System.EventHandler(this.btnDeleteWorker_Click);
             // 

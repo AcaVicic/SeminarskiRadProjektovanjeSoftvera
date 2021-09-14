@@ -47,6 +47,19 @@ namespace View.Communications
                 throw new AddException(response.Error);
         }
 
+        internal List<Client> FindClients(string searchText)
+        {
+            Request request = new Request() { Operation = Operation.FindClients, RequestObject = searchText };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new Exception(response.Error);
+
+            return response.Result as List<Client>;
+        }
+
         internal List<Worker> FindWorkers(string searchText)
         {
             Request request = new Request() { Operation = Operation.FindWorkers, RequestObject = searchText };
@@ -58,6 +71,17 @@ namespace View.Communications
                 throw new Exception(response.Error);
 
             return response.Result as List<Worker>;
+        }
+
+        internal void DeleteClient(Client client)
+        {
+            Request request = new Request() { Operation = Operation.DeleteClient, RequestObject = client };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new DeleteException(response.Error);
         }
 
         internal void DeleteWorker(Worker worker)

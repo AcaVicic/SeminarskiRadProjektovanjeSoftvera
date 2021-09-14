@@ -12,6 +12,8 @@ namespace Common
         AddWorker,
         FindWorkers,
         DeleteWorker,
-        AddClient
+        AddClient,
+        FindClients,
+        DeleteClient
     }
 }

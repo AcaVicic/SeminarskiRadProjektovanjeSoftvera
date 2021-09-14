@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientSO\AddClientSO.cs" />
+    <Compile Include="ClientSO\DeleteClientSO.cs" />
+    <Compile Include="ClientSO\GetAllClientsSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemOperationBase.cs" />
     <Compile Include="WorkerSO\AddWorkerSO.cs" />

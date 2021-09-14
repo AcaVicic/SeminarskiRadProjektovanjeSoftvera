@@ -66,5 +66,20 @@ namespace ControllerClass
             AddClientSO add = new AddClientSO();
             add.ExecuteTemplate(client);
         }
+
+        public List<Client> FindClients(string searchText)
+        {
+            Client client = new Client();
+            GetAllClientsSO getAll = new GetAllClientsSO();
+            getAll.ExecuteTemplate(client);
+
+            return getAll.Clients.Where(c => c.ToString().Contains(searchText)).ToList();
+        }
+
+        public void DeleteClient(Client client)
+        {
+            DeleteClientSO delete = new DeleteClientSO();
+            delete.ExecuteTemplate(client);
+        }
     }
 }
