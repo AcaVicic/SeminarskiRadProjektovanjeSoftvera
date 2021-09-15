@@ -36,6 +36,20 @@ namespace View.Controllers
             Communication.Instance.AddConsole(console);
         }
 
+        internal void DeleteConsole(DataGridView dgvConsoles)
+        {
+            try
+            {
+                Console console = (Console)dgvConsoles.CurrentRow.DataBoundItem;
+                Communication.Instance.DeleteConsole(console);
+                consoles.Remove(console);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(ex.Message);
+            }
+        }
+
         internal void ShowConsoleInfo(Console console, Label lblConsoleType, CheckBox ckbAvailable, TextBox txtPrice)
         {
             lblConsoleType.Text = console.ConsoleType.ToString();

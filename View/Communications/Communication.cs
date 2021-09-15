@@ -48,6 +48,17 @@ namespace View.Communications
                 throw new AddException(response.Error);
         }
 
+        internal void DeleteConsole(Console console)
+        {
+            Request request = new Request() { Operation = Operation.DeleteConsole, RequestObject = console };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new DeleteException(response.Error);
+        }
+
         internal List<Console> FindConsoles(int consoleType)
         {
             Request request = new Request() { Operation = Operation.FindConsoles, RequestObject = consoleType };

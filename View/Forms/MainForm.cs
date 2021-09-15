@@ -60,5 +60,10 @@ namespace View.Forms
         {
             controller.ShowDialog(new UpdateConsoleForm());
         }
+
+        private void deleteConsoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new DeleteConsoleForm());
+        }
     }
 }

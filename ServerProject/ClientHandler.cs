@@ -100,6 +100,9 @@ namespace ServerProject
                 case Operation.UpdateConsole:
                     Controller.Instance.UpdateConsole((Console)request.RequestObject);
                     return response = new Response() { IsSuccessful = true };
+                case Operation.DeleteConsole:
+                    Controller.Instance.DeleteConsole((Console)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");
         }

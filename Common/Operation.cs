@@ -17,6 +17,7 @@ namespace Common
         DeleteClient,
         AddConsole,
         FindConsoles,
-        UpdateConsole
+        UpdateConsole,
+        DeleteConsole
     }
 }

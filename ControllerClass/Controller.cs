@@ -104,5 +104,11 @@ namespace ControllerClass
             UpdateConsoleSO update = new UpdateConsoleSO();
             update.ExecuteTemplate(console);
         }
+
+        public void DeleteConsole(Console console)
+        {
+            DeleteConsoleSO delete = new DeleteConsoleSO();
+            delete.ExecuteTemplate(console);
+        }
     }
 }

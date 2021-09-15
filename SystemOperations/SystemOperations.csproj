@@ -45,6 +45,7 @@
     <Compile Include="ClientSO\DeleteClientSO.cs" />
     <Compile Include="ClientSO\GetAllClientsSO.cs" />
     <Compile Include="ConsoleSO\AddConsoleSO.cs" />
+    <Compile Include="ConsoleSO\DeleteConsoleSO.cs" />
     <Compile Include="ConsoleSO\GetAllConsolesSO.cs" />
     <Compile Include="ConsoleSO\UpdateConsoleSO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

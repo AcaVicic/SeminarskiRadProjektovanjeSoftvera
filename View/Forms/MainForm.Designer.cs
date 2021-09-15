@@ -145,6 +145,7 @@
             this.deleteConsoleToolStripMenuItem.Name = "deleteConsoleToolStripMenuItem";
             this.deleteConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteConsoleToolStripMenuItem.Text = "Delete Console";
+            this.deleteConsoleToolStripMenuItem.Click += new System.EventHandler(this.deleteConsoleToolStripMenuItem_Click);
             // 
             // MainForm
             // 
