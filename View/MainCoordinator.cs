@@ -32,12 +32,6 @@ namespace View
 
         }
 
-        public void OpenForm(Form form, Form closingForm)
-        {
-            form.Show();
-            closingForm.Dispose();
-        }
-
         internal void OpenMainForm(MainForm mainForm, LoginForm form)
         {
             form.Visible = false;

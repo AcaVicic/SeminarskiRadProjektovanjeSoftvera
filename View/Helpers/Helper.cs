@@ -43,6 +43,12 @@ namespace View.Helpers
             return price;
         }
 
+        internal static void DateCheck(DateTime dateOfTesting)
+        {
+            if (dateOfTesting < DateTime.Now)
+                throw new ValidationException("Console testing must take place in future");
+        }
+
         internal static void ComboBoxUnselected(ComboBox cbConsoleType)
         {
             if (cbConsoleType.SelectedIndex == -1)

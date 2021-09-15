@@ -14,6 +14,9 @@ namespace View.Communications
     {
         public SenderAndReceiver SenderAndReceiver { get; set; }
         private static Communication instance;
+
+        
+
         private Socket socket;
 
         public static Communication Instance
@@ -26,6 +29,19 @@ namespace View.Communications
             }
         }
 
+        internal List<Client> GetAllClients()
+        {
+            Request request = new Request() { Operation = Operation.GetAllClients };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new Exception(response.Error);
+
+            return response.Result as List<Client>;
+        }
+
         internal void AddWorker(Worker worker)
         {
             Request request = new Request() { Operation = Operation.AddWorker, RequestObject = worker };
@@ -35,6 +51,30 @@ namespace View.Communications
 
             if (!response.IsSuccessful)
                 throw new AddException(response.Error);
+        }
+
+        internal void AddConsoleTesting(ConsoleTesting consoleTesting)
+        {
+            Request request = new Request() { Operation = Operation.AddConsoleTesting, RequestObject = consoleTesting };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new AddException(response.Error);
+        }
+
+        internal List<Worker> GetAllWorkers()
+        {
+            Request request = new Request() { Operation = Operation.GetAllWorkers };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new Exception(response.Error);
+
+            return response.Result as List<Worker>;
         }
 
         internal void AddConsole(Domain.ConsoleNS.Console console)
@@ -57,6 +97,17 @@ namespace View.Communications
 
             if (!response.IsSuccessful)
                 throw new DeleteException(response.Error);
+        }
+
+        internal void AddAppointment(Appointment appointment)
+        {
+            Request request = new Request() { Operation = Operation.AddAppointment, RequestObject = appointment };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new AddException(response.Error);
         }
 
         internal List<Console> FindConsoles(int consoleType)
@@ -179,6 +230,19 @@ namespace View.Communications
                 return response.Result;
             else
                 throw new LoginException("Username or password is wrong!");
+        }
+
+        internal List<Console> GetAllAvailableConsoles()
+        {
+            Request request = new Request() { Operation = Operation.GetAllAvailableConsoles };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new Exception(response.Error);
+
+            return response.Result as List<Console>;
         }
     }
 }

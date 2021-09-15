@@ -56,6 +56,9 @@ namespace Storage.Implementation
             broker.Rollback();
         }
 
-        
+        public void AddComplex(IEntity entity)
+        {
+            broker.AddComplex(entity);
+        }
     }
 }

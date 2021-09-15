@@ -65,5 +65,15 @@ namespace View.Forms
         {
             controller.ShowDialog(new DeleteConsoleForm());
         }
+
+        private void addAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new AddAppointmentForm());
+        }
+
+        private void addConsoleTestingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new AddConsoleTesting());
+        }
     }
 }

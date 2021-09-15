@@ -10,6 +10,7 @@ namespace Storage
     public interface IRepository
     {
         void Add(IEntity entity);
+        void AddComplex(IEntity entity);
         void Delete(IEntity entity);
         void Update(IEntity entity);
         List<IEntity> GetAll(IEntity e);

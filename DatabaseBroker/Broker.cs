@@ -27,7 +27,16 @@ namespace DatabaseBroker
             command.CommandText = $"insert into {entity.TableName} output inserted.{entity.IdName} values({entity.InsertValues})";
 
             entity.Id = (int)command.ExecuteScalar();
+        }
 
+        public void AddComplex(IEntity entity)
+        {
+
+            SqlCommand command = new SqlCommand("", connection, transaction);
+            command.Transaction = transaction;
+            command.CommandText = $"insert into {entity.TableName} values({entity.InsertValues})";
+
+            command.ExecuteScalar();
         }
 
         public void Delete(IEntity entity)

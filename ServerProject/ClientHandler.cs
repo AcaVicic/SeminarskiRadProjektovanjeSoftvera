@@ -103,6 +103,21 @@ namespace ServerProject
                 case Operation.DeleteConsole:
                     Controller.Instance.DeleteConsole((Console)request.RequestObject);
                     return response = new Response() { IsSuccessful = true };
+                case Operation.GetAllAvailableConsoles:
+                    List<Console> availableConsoles = Controller.Instance.GetAllAvailableConsoles();
+                    return response = new Response() { IsSuccessful = true, Result = availableConsoles };
+                case Operation.GetAllClients:
+                    List<Client> clients1 = Controller.Instance.GetAllClients();
+                    return response = new Response() { IsSuccessful = true, Result = clients1 };
+                case Operation.GetAllWorkers:
+                    List<Worker> workers1 = Controller.Instance.GetAllWorkers();
+                    return response = new Response() { IsSuccessful = true, Result = workers1 };
+                case Operation.AddAppointment:
+                    Controller.Instance.AddAppointment((Appointment)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
+                case Operation.AddConsoleTesting:
+                    Controller.Instance.AddConsoleTesting((ConsoleTesting)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");
         }

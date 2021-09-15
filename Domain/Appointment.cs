@@ -16,20 +16,21 @@ namespace Domain
         public DateTime EndOfAppointment { get; set; }
         public int Discount { get; set; }
         public Worker Worker { get; set; }
+        public double Price { get; set; }
 
         public string TableName => "Appointment";
 
-        public string InsertValues => throw new NotImplementedException();
+        public string InsertValues => $"{Console.Id}, {Client.Id}, '{AppointmentDate:yyyy-MM-dd}', '{EndOfAppointment:yyyy-MM-dd}', {Discount}, {Worker.Id}, {Price}";
 
-        public string SetCondition => throw new NotImplementedException();
+        public string SetCondition => "";
 
-        public string SetValue => throw new NotImplementedException();
+        public string SetValue => "";
 
-        public string WhereCondition => throw new NotImplementedException();
+        public string WhereCondition => "";
 
-        public string Join => throw new NotImplementedException();
+        public string Join => "";
 
-        public string OrderBy => throw new NotImplementedException();
+        public string OrderBy => "";
 
         public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string IdName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

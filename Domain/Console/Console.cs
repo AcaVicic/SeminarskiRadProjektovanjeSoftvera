@@ -25,7 +25,7 @@ namespace Domain.ConsoleNS
         [Browsable(false)]
         public string SetValue => $"Available = {Convert.ToInt32(Available)}, Price = {Price}";
         [Browsable(false)]
-        public string WhereCondition => "";
+        public string WhereCondition { get; set; } = "";
         [Browsable(false)]
         public string Join => "";
         [Browsable(false)]
@@ -47,6 +47,11 @@ namespace Domain.ConsoleNS
                 });
             }
             return result;
+        }
+
+        public override string ToString()
+        {
+            return ConsoleType.ToString();
         }
     }
 }

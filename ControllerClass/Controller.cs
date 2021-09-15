@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using SystemOperations.ClientSO;
 using SystemOperations.WorkerSO;
 using SystemOperations.ConsoleSO;
+using SystemOperations.AddAppointmentSO;
+using SystemOperations.ConsoleTestingSO;
 
 namespace ControllerClass
 {
@@ -109,6 +111,56 @@ namespace ControllerClass
         {
             DeleteConsoleSO delete = new DeleteConsoleSO();
             delete.ExecuteTemplate(console);
+        }
+
+        public List<Console> GetAllAvailableConsoles()
+        {
+            Console console = new Console
+            {
+                WhereCondition = "Available = 1"
+            };
+            GetAllConsolesSO getAll = new GetAllConsolesSO();
+            getAll.ExecuteTemplate(console);
+
+            return getAll.Consoles;
+        }
+
+        public List<Client> GetAllClients()
+        {
+            Client client = new Client();
+            GetAllClientsSO getAll = new GetAllClientsSO();
+            getAll.ExecuteTemplate(client);
+
+            return getAll.Clients;
+        }
+
+        public List<Worker> GetAllWorkers()
+        {
+            Worker worker = new Worker();
+            GetAllWorkersSO getAll = new GetAllWorkersSO();
+            getAll.ExecuteTemplate(worker);
+
+            return getAll.Workers;
+        }
+
+        public void AddAppointment(Appointment appointment)
+        {
+            AddAppointmentSO add = new AddAppointmentSO();
+            add.ExecuteTemplate(appointment);
+
+            appointment.Console.Available = false;
+            UpdateConsoleSO update = new UpdateConsoleSO();
+            update.ExecuteTemplate(appointment.Console);
+        }
+
+        public void AddConsoleTesting(ConsoleTesting consoleTesting)
+        {
+            AddConsoleTestingSO add = new AddConsoleTestingSO();
+            add.ExecuteTemplate(consoleTesting);
+
+            consoleTesting.Console.Available = false;
+            UpdateConsoleSO update = new UpdateConsoleSO();
+            update.ExecuteTemplate(consoleTesting.Console);
         }
     }
 }

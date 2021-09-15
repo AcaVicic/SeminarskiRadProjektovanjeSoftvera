@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Communications\Communication.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\ConsoleController.cs" />
+    <Compile Include="Controllers\ConsoleTestingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\WorkerController.cs" />
@@ -59,6 +61,12 @@
     <Compile Include="Exceptions\LoginException.cs" />
     <Compile Include="Exceptions\UpdateException.cs" />
     <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Forms\AddAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddAppointmentForm.Designer.cs">
+      <DependentUpon>AddAppointmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +78,12 @@
     </Compile>
     <Compile Include="Forms\AddConsoleForm.Designer.cs">
       <DependentUpon>AddConsoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddConsoleTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddConsoleTesting.Designer.cs">
+      <DependentUpon>AddConsoleTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddWorkerForm.cs">
       <SubType>Form</SubType>
@@ -135,11 +149,17 @@
     <Compile Include="MainCoordinator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddAppointmentForm.resx">
+      <DependentUpon>AddAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddClientForm.resx">
       <DependentUpon>AddClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddConsoleForm.resx">
       <DependentUpon>AddConsoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddConsoleTesting.resx">
+      <DependentUpon>AddConsoleTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddWorkerForm.resx">
       <DependentUpon>AddWorkerForm.cs</DependentUpon>

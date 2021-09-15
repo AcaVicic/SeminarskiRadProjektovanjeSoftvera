@@ -42,6 +42,10 @@
             this.addConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consoleTestingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addConsoleTestingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +59,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientsToolStripMenuItem,
             this.clientToolStripMenuItem,
-            this.consoleToolStripMenuItem});
+            this.consoleToolStripMenuItem,
+            this.appointmentToolStripMenuItem,
+            this.consoleTestingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(579, 24);
@@ -129,23 +135,53 @@
             // addConsoleToolStripMenuItem
             // 
             this.addConsoleToolStripMenuItem.Name = "addConsoleToolStripMenuItem";
-            this.addConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.addConsoleToolStripMenuItem.Text = "Add Console";
             this.addConsoleToolStripMenuItem.Click += new System.EventHandler(this.addConsoleToolStripMenuItem_Click);
             // 
             // updateConsoleToolStripMenuItem
             // 
             this.updateConsoleToolStripMenuItem.Name = "updateConsoleToolStripMenuItem";
-            this.updateConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.updateConsoleToolStripMenuItem.Text = "Update Console";
             this.updateConsoleToolStripMenuItem.Click += new System.EventHandler(this.updateConsoleToolStripMenuItem_Click);
             // 
             // deleteConsoleToolStripMenuItem
             // 
             this.deleteConsoleToolStripMenuItem.Name = "deleteConsoleToolStripMenuItem";
-            this.deleteConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.deleteConsoleToolStripMenuItem.Text = "Delete Console";
             this.deleteConsoleToolStripMenuItem.Click += new System.EventHandler(this.deleteConsoleToolStripMenuItem_Click);
+            // 
+            // appointmentToolStripMenuItem
+            // 
+            this.appointmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addAppointmentToolStripMenuItem});
+            this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
+            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.appointmentToolStripMenuItem.Text = "Appointment";
+            // 
+            // addAppointmentToolStripMenuItem
+            // 
+            this.addAppointmentToolStripMenuItem.Name = "addAppointmentToolStripMenuItem";
+            this.addAppointmentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.addAppointmentToolStripMenuItem.Text = "Add Appointment";
+            this.addAppointmentToolStripMenuItem.Click += new System.EventHandler(this.addAppointmentToolStripMenuItem_Click);
+            // 
+            // consoleTestingToolStripMenuItem
+            // 
+            this.consoleTestingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addConsoleTestingToolStripMenuItem});
+            this.consoleTestingToolStripMenuItem.Name = "consoleTestingToolStripMenuItem";
+            this.consoleTestingToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.consoleTestingToolStripMenuItem.Text = "Console Testing";
+            // 
+            // addConsoleTestingToolStripMenuItem
+            // 
+            this.addConsoleTestingToolStripMenuItem.Name = "addConsoleTestingToolStripMenuItem";
+            this.addConsoleTestingToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.addConsoleTestingToolStripMenuItem.Text = "Add Console Testing";
+            this.addConsoleTestingToolStripMenuItem.Click += new System.EventHandler(this.addConsoleTestingToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -180,5 +216,9 @@
         private System.Windows.Forms.ToolStripMenuItem deleteConsoleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem findClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem appointmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addAppointmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consoleTestingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addConsoleTestingToolStripMenuItem;
     }
 }

@@ -18,6 +18,11 @@ namespace Common
         AddConsole,
         FindConsoles,
         UpdateConsole,
-        DeleteConsole
+        DeleteConsole,
+        GetAllAvailableConsoles,
+        GetAllClients,
+        GetAllWorkers,
+        AddAppointment,
+        AddConsoleTesting
     }
 }
