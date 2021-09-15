@@ -1,5 +1,6 @@
 ﻿using Common;
 using Domain;
+using Console = Domain.ConsoleNS.Console;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -34,6 +35,41 @@ namespace View.Communications
 
             if (!response.IsSuccessful)
                 throw new AddException(response.Error);
+        }
+
+        internal void AddConsole(Domain.ConsoleNS.Console console)
+        {
+            Request request = new Request() { Operation = Operation.AddConsole, RequestObject = console };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new AddException(response.Error);
+        }
+
+        internal List<Console> FindConsoles(int consoleType)
+        {
+            Request request = new Request() { Operation = Operation.FindConsoles, RequestObject = consoleType };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new Exception(response.Error);
+
+            return response.Result as List<Console>;
+        }
+
+        internal void UpdateConsole(Console console)
+        {
+            Request request = new Request() { Operation = Operation.UpdateConsole, RequestObject = console };
+
+            SenderAndReceiver.Send(request);
+            Response response = SenderAndReceiver.Receive() as Response;
+
+            if (!response.IsSuccessful)
+                throw new UpdateException(response.Error);
         }
 
         internal void AddClient(Client client)

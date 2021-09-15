@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.Communications;
+using View.Exceptions;
 using View.Helpers;
 
 namespace View.Controllers
@@ -42,9 +43,16 @@ namespace View.Controllers
 
         internal void DeleteWorker(DataGridView dgvWorkers)
         {
-            Worker worker = (Worker)dgvWorkers.CurrentRow.DataBoundItem;
-            Communication.Instance.DeleteWorker(worker);
-            workers.Remove(worker);
+            try
+            {
+                Worker worker = (Worker)dgvWorkers.CurrentRow.DataBoundItem;
+                Communication.Instance.DeleteWorker(worker);
+                workers.Remove(worker);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(ex.Message);
+            }
         }
     }
 }

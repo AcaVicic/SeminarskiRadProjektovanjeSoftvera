@@ -36,12 +36,12 @@
             this.deleteWorkerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.findClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteConsoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,9 +98,23 @@
             // addClientToolStripMenuItem
             // 
             this.addClientToolStripMenuItem.Name = "addClientToolStripMenuItem";
-            this.addClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addClientToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.addClientToolStripMenuItem.Text = "Add Client";
             this.addClientToolStripMenuItem.Click += new System.EventHandler(this.addClientToolStripMenuItem_Click);
+            // 
+            // findClientToolStripMenuItem
+            // 
+            this.findClientToolStripMenuItem.Name = "findClientToolStripMenuItem";
+            this.findClientToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.findClientToolStripMenuItem.Text = "Find Client";
+            this.findClientToolStripMenuItem.Click += new System.EventHandler(this.findClientToolStripMenuItem_Click);
+            // 
+            // deleteClientToolStripMenuItem
+            // 
+            this.deleteClientToolStripMenuItem.Name = "deleteClientToolStripMenuItem";
+            this.deleteClientToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.deleteClientToolStripMenuItem.Text = "Delete Client";
+            this.deleteClientToolStripMenuItem.Click += new System.EventHandler(this.deleteClientToolStripMenuItem_Click);
             // 
             // consoleToolStripMenuItem
             // 
@@ -115,33 +129,22 @@
             // addConsoleToolStripMenuItem
             // 
             this.addConsoleToolStripMenuItem.Name = "addConsoleToolStripMenuItem";
-            this.addConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.addConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addConsoleToolStripMenuItem.Text = "Add Console";
+            this.addConsoleToolStripMenuItem.Click += new System.EventHandler(this.addConsoleToolStripMenuItem_Click);
             // 
             // updateConsoleToolStripMenuItem
             // 
             this.updateConsoleToolStripMenuItem.Name = "updateConsoleToolStripMenuItem";
-            this.updateConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.updateConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateConsoleToolStripMenuItem.Text = "Update Console";
+            this.updateConsoleToolStripMenuItem.Click += new System.EventHandler(this.updateConsoleToolStripMenuItem_Click);
             // 
             // deleteConsoleToolStripMenuItem
             // 
             this.deleteConsoleToolStripMenuItem.Name = "deleteConsoleToolStripMenuItem";
-            this.deleteConsoleToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.deleteConsoleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteConsoleToolStripMenuItem.Text = "Delete Console";
-            // 
-            // findClientToolStripMenuItem
-            // 
-            this.findClientToolStripMenuItem.Name = "findClientToolStripMenuItem";
-            this.findClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.findClientToolStripMenuItem.Text = "Find Client";
-            // 
-            // deleteClientToolStripMenuItem
-            // 
-            this.deleteClientToolStripMenuItem.Name = "deleteClientToolStripMenuItem";
-            this.deleteClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.deleteClientToolStripMenuItem.Text = "Delete Client";
-            this.deleteClientToolStripMenuItem.Click += new System.EventHandler(this.deleteClientToolStripMenuItem_Click);
             // 
             // MainForm
             // 

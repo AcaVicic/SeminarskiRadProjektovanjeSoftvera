@@ -1,6 +1,7 @@
 ﻿using Common;
 using ControllerClass;
 using Domain;
+using Console = Domain.ConsoleNS.Console;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,6 +90,15 @@ namespace ServerProject
                     return response = new Response() { IsSuccessful = true, Result = clients };
                 case Operation.DeleteClient:
                     Controller.Instance.DeleteClient((Client)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
+                case Operation.AddConsole:
+                    Controller.Instance.AddConsole((Console)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true };
+                case Operation.FindConsoles:
+                    List<Console> consoles = Controller.Instance.FindConsoles((int)request.RequestObject);
+                    return response = new Response() { IsSuccessful = true, Result = consoles };
+                case Operation.UpdateConsole:
+                    Controller.Instance.UpdateConsole((Console)request.RequestObject);
                     return response = new Response() { IsSuccessful = true };
             }
             throw new Exception("Operation doesn't exist!");

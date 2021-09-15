@@ -12,30 +12,32 @@ using View.Exceptions;
 
 namespace View.Forms
 {
-    public partial class AddClientForm : Form
+    public partial class FindClientForm : Form
     {
         private ClientController controller;
-        public AddClientForm()
+        public FindClientForm()
         {
             InitializeComponent();
             controller = new ClientController();
         }
 
-        private void btnSaveWorker_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!controller.FindClients(txtSearch, dgvClients))
+                MessageBox.Show("System can't find clients with a given value");
+        }
+
+        private void btnShowClient_Click(object sender, EventArgs e)
         {
             try
             {
-                controller.AddClient(txtFirstName, txtLastName, txtBirthDate);
-                MessageBox.Show("System saved client");
+                controller.ShowClient(dgvClients);
+                
             }
-            catch (AddException ex)
+            catch (FindException ex)
             {
-                MessageBox.Show("System can't save client");
+                MessageBox.Show("System can't find client with a given value");
                 MessageBox.Show(ex.Message);
-            }
-            catch (ValidationException ve)
-            {
-                MessageBox.Show(ve.Message);
             }
         }
     }

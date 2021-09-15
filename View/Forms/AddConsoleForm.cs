@@ -12,25 +12,33 @@ using View.Exceptions;
 
 namespace View.Forms
 {
-    public partial class AddClientForm : Form
+    public partial class AddConsoleForm : Form
     {
-        private ClientController controller;
-        public AddClientForm()
+        private ConsoleController controller;
+        public AddConsoleForm()
         {
             InitializeComponent();
-            controller = new ClientController();
+            controller = new ConsoleController();
+            try
+            {
+                controller.InitializeConsoleTypes(cbConsoleType);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void btnSaveWorker_Click(object sender, EventArgs e)
+        private void btnSaveConsole_Click(object sender, EventArgs e)
         {
             try
             {
-                controller.AddClient(txtFirstName, txtLastName, txtBirthDate);
-                MessageBox.Show("System saved client");
+                controller.AddConsole(cbConsoleType, txtPrice);
+                MessageBox.Show("System saved console");
             }
             catch (AddException ex)
             {
-                MessageBox.Show("System can't save client");
+                MessageBox.Show("System can't save console");
                 MessageBox.Show(ex.Message);
             }
             catch (ValidationException ve)

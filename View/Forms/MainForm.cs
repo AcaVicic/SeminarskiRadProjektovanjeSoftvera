@@ -45,5 +45,20 @@ namespace View.Forms
         {
             controller.ShowDialog(new DeleteClientForm());
         }
+
+        private void findClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new FindClientForm());
+        }
+
+        private void addConsoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new AddConsoleForm());
+        }
+
+        private void updateConsoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ShowDialog(new UpdateConsoleForm());
+        }
     }
 }

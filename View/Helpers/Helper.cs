@@ -32,6 +32,23 @@ namespace View.Helpers
                 throw new ValidationException("Fields must not be empty");
         }
 
+        internal static double DobuleValue(TextBox txtPrice)
+        {
+            double price;
+            bool isDouble = Double.TryParse(txtPrice.Text, out price);
+
+            if (!isDouble)
+                throw new ValidationException("Price must be number");
+
+            return price;
+        }
+
+        internal static void ComboBoxUnselected(ComboBox cbConsoleType)
+        {
+            if (cbConsoleType.SelectedIndex == -1)
+                throw new ValidationException("Console type is not selected");
+        }
+
         internal static DateTime DateFormat(TextBox txtBirthDate)
         {
             try

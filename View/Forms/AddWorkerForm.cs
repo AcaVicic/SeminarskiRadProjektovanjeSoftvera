@@ -33,9 +33,9 @@ namespace View.Forms
                 MessageBox.Show("System can't save worker");
                 MessageBox.Show(ex.Message);
             }
-            catch (ValidationException)
+            catch (ValidationException ve)
             {
-
+                MessageBox.Show(ve.Message);
             }
         }
     }

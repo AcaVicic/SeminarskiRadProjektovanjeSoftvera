@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Console = Domain.ConsoleNS.Console;
 using Storage;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SystemOperations.ClientSO;
 using SystemOperations.WorkerSO;
+using SystemOperations.ConsoleSO;
 
 namespace ControllerClass
 {
@@ -80,6 +82,27 @@ namespace ControllerClass
         {
             DeleteClientSO delete = new DeleteClientSO();
             delete.ExecuteTemplate(client);
+        }
+
+        public void AddConsole(Console console)
+        {
+            AddConsoleSO add = new AddConsoleSO();
+            add.ExecuteTemplate(console);
+        }
+
+        public List<Console> FindConsoles(int consoleType)
+        {
+            Console console = new Console();
+            GetAllConsolesSO getAll = new GetAllConsolesSO();
+            getAll.ExecuteTemplate(console);
+
+            return getAll.Consoles.Where(c => (int)c.ConsoleType == consoleType).ToList();
+        }
+
+        public void UpdateConsole(Console console)
+        {
+            UpdateConsoleSO update = new UpdateConsoleSO();
+            update.ExecuteTemplate(console);
         }
     }
 }

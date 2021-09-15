@@ -14,6 +14,9 @@ namespace Common
         DeleteWorker,
         AddClient,
         FindClients,
-        DeleteClient
+        DeleteClient,
+        AddConsole,
+        FindConsoles,
+        UpdateConsole
     }
 }
