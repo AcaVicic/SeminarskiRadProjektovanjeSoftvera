@@ -39,6 +39,10 @@ namespace View.Helpers
 
             if (!isDouble)
                 throw new ValidationException("Price must be number");
+            else if(price <= 0)
+            {
+                throw new ValidationException("Price must must not be less then or equals 0");
+            }
 
             return price;
         }
