@@ -19,6 +19,7 @@ namespace View.Forms
         {
             InitializeComponent();
             controller = new MainController();
+            
         }
 
         private void addWorkerToolStripMenuItem_Click(object sender, EventArgs e)

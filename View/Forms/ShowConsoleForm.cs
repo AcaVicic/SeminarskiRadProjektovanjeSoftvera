@@ -43,11 +43,11 @@ namespace View.Forms
             try
             {
                 controller.UpdateConsole(console, ckbAvailable, txtPrice);
-                MessageBox.Show("System successfully updated console");
+                MessageBox.Show("System saved console");
             }
             catch (UpdateException ue)
             {
-                MessageBox.Show("System can't update console");
+                MessageBox.Show("System can't save console");
                 MessageBox.Show(ue.Message);
             }
         }
